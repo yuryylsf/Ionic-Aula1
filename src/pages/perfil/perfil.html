@@ -1,0 +1,41 @@
+
+<ion-header>
+
+  <ion-navbar>
+      <button ion-button menuToggle>
+          <ion-icon name="menu"></ion-icon>
+        </button>
+    <ion-title>Perfil</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+<img src="http://www.mhcsa.org.au/wp-content/uploads/2016/08/default-non-user-no-photo.jpg">
+<h3>Nome do Usuário</h3>
+<ion-list inset>
+
+    <ion-item>
+     
+      <ion-input type="text" placehoder="Endereço" value= "Rua x" ></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      
+        <ion-input type="text" placehoder="Cidade" value= "Rio de Janeiro" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      
+        <ion-input type="text" placehoder="cep" value= "26520250" ></ion-input>
+    </ion-item>
+    
+    <ion-item>
+      
+        <ion-input type="text" placehoder="Telefone" value= "26932758" ></ion-input>
+    </ion-item>
+    <button ion-button block (click)="atualizar()">Atualizar</button>
+  
+  </ion-list>
+</ion-content>
