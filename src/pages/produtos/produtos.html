@@ -16,29 +16,13 @@
 <ion-content padding>
 <h3>Nome Categoria</h3>
 <ion-list>
-    <ion-item>
+    <ion-item *ngFor="let p of produtos">
       <ion-thumbnail item-start>
-        <img src="https://thumbs.buscape.com.br/celular-e-smartphone/smartphone-samsung-galaxy-j7-prime-sm-g610m_200x200-PU9946d_1.jpg">
+        <img src="../../assets/imgs/{{p.imagem}}">
       </ion-thumbnail>
-      <h2>CELULAR SANSUG</h2>
-      <p>R$ 500,00</p>
-      <button ion-button clear item-end (click)="navProdutoDetalhe()">VISUALIZAR</button>
+      <h2>{{p.nome}}</h2>
+      <p>{{p.preco | currency:'BRL':true:'1.2-2'}}</p>
+      <button ion-button clear item-end (click)="navProdutoDetalhe(p)">VISUALIZAR</button>
     </ion-item>
-    <ion-item>
-        <ion-thumbnail item-start>
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7v2PiszP6wYVUm3gvCsKt4N4-ppZCB1rmJT1f8S4HjImu3GAXhg">
-        </ion-thumbnail>
-        <h2>CELULAR SANSUG</h2>
-        <p>R$ 500,00</p>
-        <button ion-button clear item-end (click)="navProdutoDetalhe()">VISUALIZAR</button>
-      </ion-item>
-      <ion-item>
-          <ion-thumbnail item-start>
-            <img src="https://tigocolombia.vteximg.com.br/arquivos/ids/155714-210-210/Front_P20_Lite_Black.png?v=636592299710800000">
-          </ion-thumbnail>
-          <h2>CELULAR SANSUG</h2>
-          <p>R$ 500,00</p>
-          <button ion-button clear item-end (click)="navProdutoDetalhe()">VISUALIZAR</button>
-        </ion-item>
   </ion-list>
 </ion-content>

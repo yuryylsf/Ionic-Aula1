@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { Produto } from '../../model/produto';
 
 /**
  * Generated class for the ProdutoDetalhePage page.
@@ -14,12 +15,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'produto-detalhe.html',
 })
 export class ProdutoDetalhePage {
+  produto : Produto;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.produto = this.navParams.get('produto');
   }
-
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ProdutoDetalhePage');
-  }
-
 }
